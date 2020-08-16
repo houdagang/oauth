@@ -1,6 +1,7 @@
 package com.xiaogang.oauth.configuration;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 
 /**
@@ -9,6 +10,7 @@ import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenCo
  * @描述 :
  * @创建日期 : 2020-08-14 17:27
  */
+@Configuration
 public class JwtTokenConfiguration {
 
     /**

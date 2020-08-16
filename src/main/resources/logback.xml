@@ -29,11 +29,11 @@
                 <springProfileb标签的包含的范围可大可小，自己确定即可否则采用第二种格式
             -->
             <springProfile name="dev">
-                <pattern>%d{MM-dd HH:mm:ss.SSS} --> [%thread] --> %-5level %logger{50} - %msg%n</pattern>
+                <pattern>%d{HH:mm:ss.SSS}-->[%thread]-->%-5level %logger{50} - %msg%n</pattern>
             </springProfile>
 
             <springProfile name="!dev">
-                <pattern>%d{MM-dd HH:mm:ss.SSS} --> [%thread] --> %-5level %logger{50} - %msg%n</pattern>
+                <pattern>%d{HH:mm:ss.SSS}-->[%thread]-->%-5level %logger{50} - %msg%n</pattern>
             </springProfile>
         </layout>
     </appender>
@@ -88,7 +88,7 @@
         root与logger为父子关系，没有特别定义则默认为root，任何一个类只会和一个logger对应，
         要么是定义的logger，要么是root，判断的关键在于找到这个logger，然后判断这个logger的appender和level
     -->
-    <root level="info">
+    <root level="debug">
         <!-- 控制台输出，对应上面name="stdout" 配置 -->
         <appender-ref ref="stdout"/>
         <!-- 文件输出，对应上面name="appLogAppender"的配置 -->
